@@ -54,7 +54,7 @@ fn generate_random_permutation<T: Rng>(rng: &mut T, length: u8) -> Vec<u8> {
     let mut result: Vec<u8> = (0..length).collect();
 
     for i in 0..length {
-        let swap_pos = rng.gen_range(i..length);
+        let swap_pos = rng.random_range(i..length);
         result.swap(i as usize, swap_pos as usize);
     }
 
